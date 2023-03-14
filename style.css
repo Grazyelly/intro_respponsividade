@@ -1,0 +1,128 @@
+* {
+  /* remover todas as margens */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  /* retirar os pontos que ficaram em frente o li do html */
+  list-style: none;
+}
+/* rem colocamos essa % para ficar masi facil a escrita e a divisão do rem (rem fica no lugar do px) */
+/* usar sempre unidades de medidas relativas ou seja que funcione do celular e no computador (rem) */
+:root {
+  font-size: 62.5%; /* 10px*/
+}
+
+/* REM = root EM */
+
+body {
+  font-family:'Epilogue', 'sans-serif';
+  background: #ECE9FD;
+  /* para espaçamento das laterais */
+  padding: 6.0rem 2.3rem 6.6rem;
+  font-size: 1.6rem;
+}
+
+main {
+  /* largura maxima */
+  max-width: 33.0rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 800;
+  /* rem é para acessibilidade do usuario sempre vai dividir por 10*/
+  font-size: 4.0rem; 
+  line-height: 4.8rem;
+
+  color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+/* first-child (seria o comando para pegar o primeiro p que aparecer) */
+main p:first-child {
+  color: #7158EF;
+  /* espaçamento entre as letras */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+/* pegando o p que é anterior a o h1 */
+h1 + p {
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+  /* para apagar a barrinha embaixo dos links */
+  text-decoration: none;
+}
+/* para quando passar o mouse ficar mais escurinho */
+a:hover {
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #090039;
+  /* maximo que eu quero é esse tamanho */
+  max-width: 25.7rem;
+
+  display: flex;
+  gap: 3.8rem;
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  /* quando a unidade for muito pequena (abaixo de 4px) pode deixar em px */
+  letter-spacing: -2px;
+
+  color: #090039;
+}
+
+/* media queries */
+/* esse é o que faz o ajuste do tamanho da nossa tela (deskto e mobile) */
+@media (min-width: 700px) {
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1020px;
+    /* uma ao lado da outra */
+    display: flex;
+    gap: 10rem;
+  }
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+
+  ul li + li {
+    margin-top: 3.2rem;
+  }
+}
